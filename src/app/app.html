@@ -1,5 +1,5 @@
-<app-navbar></app-navbar>
-<main>
+<app-splash-screen *ngIf="showSplash" (done)="onSplashDone()"></app-splash-screen>
+<main *ngIf="!showSplash">
   <router-outlet></router-outlet>
 </main>
-<app-footer></app-footer>
+<app-footer *ngIf="!showSplash"></app-footer>

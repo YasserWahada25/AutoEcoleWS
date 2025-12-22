@@ -1,0 +1,30 @@
+<div class="splash-container" [style.opacity]="opacity">
+    <div class="content">
+        <!-- Logo / Icon -->
+        <div class="logo-container">
+            <div class="car-icon">
+                <div class="car-top"></div>
+                <div class="car-body"></div>
+                <div class="car-wheels">
+                    <div class="wheel left"></div>
+                    <div class="wheel right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Content -->
+        <h1 class="title">مدرسة صابر بنعمار لتعليم السياقة</h1>
+        <p class="subtitle">في طريق النجاح</p>
+        <p class="description">مسارك المثالي في قانون الطرقات</p>
+
+        <!-- Progress Bar -->
+        <div class="progress-wrapper">
+            <div class="progress-track">
+                <!-- Use style.width.% binding -->
+                <div class="progress-bar" [style.width.%]="progress"></div>
+            </div>
+            <!-- Interpolation -->
+            <div class="progress-text">{{ progress | number:'1.0-0' }}%</div>
+        </div>
+    </div>
+</div>

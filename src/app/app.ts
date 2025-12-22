@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from './core/layout/navbar/navbar';
 import { Footer } from './core/layout/footer/footer';
+import { SplashScreenComponent } from './core/components/splash-screen/splash-screen';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Navbar, Footer],
+  imports: [RouterOutlet, Footer, SplashScreenComponent, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App { }
+export class App {
+  showSplash = true;
+
+  onSplashDone() {
+    this.showSplash = false;
+  }
+}
