@@ -1,18 +1,21 @@
-<section class="section-padding bg-light" id="instructors">
+<section id="instructors" class="instructors-section">
     <div class="container">
-        <app-section-title title="Nos Moniteurs"
-            subtitle="Une équipe de professionnels passionnés à votre service."></app-section-title>
+        <div class="section-header">
+            <h2>مدربونا</h2>
+            <p>فريق من المحترفين الشغوفين في خدمتك.</p>
+            <div class="divider"></div>
+        </div>
 
-        <div class="grid-4">
+        <div class="instructors-grid">
             <div class="instructor-card" *ngFor="let instructor of instructors">
-                <div class="instructor-photo">
-                    <div class="photo-placeholder">👤</div>
+                <div class="instructor-image">
+                    <img [src]="instructor.image" [alt]="instructor.name" loading="lazy">
                 </div>
                 <div class="instructor-info">
                     <h3>{{ instructor.name }}</h3>
                     <span class="role">{{ instructor.role }}</span>
-                    <p class="experience">{{ instructor.experience }} d'expérience</p>
-                    <p class="bio">{{ instructor.bio }}</p>
+                    <span class="experience">{{ instructor.experience }}</span>
+                    <p class="description">{{ instructor.description }}</p>
                 </div>
             </div>
         </div>
