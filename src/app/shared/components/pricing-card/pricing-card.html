@@ -1,0 +1,13 @@
+<div class="pricing-card" [class.popular]="isPopular">
+    <div class="popular-tag" *ngIf="isPopular">Populaire</div>
+    <h3>{{ title }}</h3>
+    <div class="price">{{ price }}</div>
+    <ul class="features-list">
+        <li *ngFor="let feature of features">
+            <span class="check">✓</span> {{ feature }}
+        </li>
+    </ul>
+    <a [routerLink]="link" class="btn" [class.btn-primary]="isPopular" [class.btn-secondary]="!isPopular">
+        {{ buttonText }}
+    </a>
+</div>

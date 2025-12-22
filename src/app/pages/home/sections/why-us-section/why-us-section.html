@@ -1,0 +1,12 @@
+<section class="section-padding bg-white" id="why-us">
+    <div class="container">
+        <app-section-title title="Pourquoi nous choisir ?"
+            subtitle="Nous mettons tout en œuvre pour votre réussite."></app-section-title>
+
+        <div class="grid-4">
+            <app-service-card *ngFor="let feature of features" [title]="feature.title"
+                [description]="feature.description" [icon]="feature.icon">
+            </app-service-card>
+        </div>
+    </div>
+</section>

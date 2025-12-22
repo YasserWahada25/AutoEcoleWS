@@ -1,0 +1,26 @@
+<section class="page-header">
+    <div class="container">
+        <h1>Nos Tarifs</h1>
+        <p>Des prix transparents et compétitifs pour votre formation.</p>
+    </div>
+</section>
+
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="grid-3">
+            <app-pricing-card *ngFor="let offer of offers" [title]="offer.title" [price]="offer.price"
+                [features]="offer.features" [isPopular]="offer.isPopular" [link]="offer.link"
+                buttonText="Choisir cette formule">
+            </app-pricing-card>
+        </div>
+
+        <div class="pricing-details">
+            <h3>Détails supplémentaires</h3>
+            <ul>
+                <li>Heure de conduite supplémentaire : 45€</li>
+                <li>Frais d'accompagnement à l'examen : 45€</li>
+                <li>Livre de code : 15€</li>
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+<section class="section-padding bg-light" id="formations">
+    <div class="container">
+        <app-section-title title="Nos Formations"
+            subtitle="Des solutions adaptées à chaque profil pour obtenir votre permis."></app-section-title>
+
+        <div class="grid-3">
+            <app-service-card *ngFor="let formation of formations" [title]="formation.title"
+                [description]="formation.description" [icon]="formation.icon" [points]="formation.points">
+            </app-service-card>
+        </div>
+    </div>
+</section>

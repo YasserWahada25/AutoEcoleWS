@@ -1,0 +1,20 @@
+.cta-section {
+    background-color: #E0F7FA;
+    border-radius: 30px;
+    margin: 40px 20px;
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}

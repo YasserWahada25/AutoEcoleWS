@@ -1,0 +1,5 @@
+<div class="section-title" [class.text-left]="align === 'left'" [class.text-center]="align === 'center'">
+    <h2>{{ title }}</h2>
+    <p *ngIf="subtitle">{{ subtitle }}</p>
+    <div class="divider" [class.center]="align === 'center'"></div>
+</div>

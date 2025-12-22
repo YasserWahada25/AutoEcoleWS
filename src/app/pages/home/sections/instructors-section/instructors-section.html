@@ -1,0 +1,20 @@
+<section class="section-padding bg-light" id="instructors">
+    <div class="container">
+        <app-section-title title="Nos Moniteurs"
+            subtitle="Une équipe de professionnels passionnés à votre service."></app-section-title>
+
+        <div class="grid-4">
+            <div class="instructor-card" *ngFor="let instructor of instructors">
+                <div class="instructor-photo">
+                    <div class="photo-placeholder">👤</div>
+                </div>
+                <div class="instructor-info">
+                    <h3>{{ instructor.name }}</h3>
+                    <span class="role">{{ instructor.role }}</span>
+                    <p class="experience">{{ instructor.experience }} d'expérience</p>
+                    <p class="bio">{{ instructor.bio }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

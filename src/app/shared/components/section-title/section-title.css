@@ -1,0 +1,35 @@
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.text-left p {
+    margin-left: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.divider {
+    height: 4px;
+    width: 80px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.divider.center {
+    margin: 0 auto;
+}

@@ -1,0 +1,225 @@
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Map Card Styles */
+.map-card {
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid #f0f0f0;
+}
+
+.map-header {
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #f9f9f9, #fff);
+}
+
+.icon-badge {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 10px;
+    background: #e0f7fa;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+}
+
+.map-header h3 {
+    margin: 0.5rem 0 0.2rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.map-header p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.map-frame {
+    height: 300px;
+    width: 100%;
+    background: #eee;
+}
+
+.map-footer {
+    padding: 1.5rem;
+}
+
+.quick-info {
+    margin-bottom: 1.5rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+}
+
+.info-row .icon {
+    font-size: 1.2rem;
+}
+
+.map-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.secondary-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.secondary-actions .btn {
+    flex: 1;
+}
+
+/* Hours Card */
+.hours-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.hours-card h4 {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hours-card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f5f5f5;
+    color: var(--text-dark);
+}
+
+.hours-card ul li:last-child {
+    border-bottom: none;
+}
+
+.closed {
+    color: #ff6b6b;
+    font-weight: 500;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.contact-form-wrapper h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+.form-subtitle {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.1);
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #e0e0e0;
+    color: var(--text-dark);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+@media (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-left {
+        order: 1;
+    }
+
+    .contact-form-wrapper {
+        order: 2;
+    }
+}
+
+/* RTL Support */
+#contact[dir="rtl"] .contact-grid {
+    text-align: right;
+}
+
+#contact[dir="rtl"] .info-row {
+    flex-direction: row;
+    /* Keep icon and text together */
+}
+
+#contact[dir="rtl"] .hours-card ul li {
+    flex-direction: row;
+}
+
+#contact[dir="rtl"] .form-group label {
+    text-align: right;
+}
+
+#contact[dir="rtl"] .form-group input,
+#contact[dir="rtl"] .form-group textarea {
+    text-align: right;
+}

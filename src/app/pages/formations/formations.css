@@ -1,0 +1,27 @@
+.page-header {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.bg-light {
+    background-color: var(--background-light);
+}

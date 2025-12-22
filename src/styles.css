@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles & Variables */
+:root {
+  /* Colors - Inspired by Dental Clinic Template (Pastel/Clean) */
+  --primary-color: #4ECDC4; /* Mint Green */
+  --secondary-color: #1A535C; /* Dark Teal */
+  --accent-color: #FF6B6B; /* Soft Red/Pink for CTA */
+  --background-light: #F7FFF7; /* Very light mint/white */
+  --text-dark: #2D3436;
+  --text-light: #636E72;
+  --white: #FFFFFF;
+  --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  --border-radius: 20px;
+  
+  /* Fonts */
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
