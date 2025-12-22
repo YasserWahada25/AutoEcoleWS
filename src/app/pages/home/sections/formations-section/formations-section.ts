@@ -11,42 +11,58 @@ import { ServiceCard } from '../../../../shared/components/service-card/service-
     styleUrl: './formations-section.css',
 })
 export class FormationsSection {
-    formations = [
+    // Slider Images (Placeholders)
+    images: string[] =
+        [
+            'AutoEcole2.png',
+            'AutoEcole3.png',
+            'AutoEcole4.png',
+            'AutoEcole5.png',
+            'AutoEcole6.png',
+
+        ];
+    currentSlide = 0;
+
+    // Advantages Data
+    advantages = [
         {
-            title: 'Permis B (Manuel)',
-            description: 'La formation classique pour apprendre à conduire une voiture à boîte manuelle.',
-            icon: '🚗',
-            points: ['Code de la route', '20h de conduite minimum', 'Passage de l\'examen']
+            title: 'مدرب ذوو خبرة',
+            description: 'مرافقة بيداغوجية ومتابعة شخصية طوال فترة التعلّم.',
+            icon: '👨‍🏫'
         },
         {
-            title: 'Permis B (Automatique)',
-            description: 'Une formation simplifiée et plus rapide sur boîte automatique.',
-            icon: '🚙',
-            points: ['Code de la route', '13h de conduite minimum', 'Passage de l\'examen']
+            title: 'سيارة حديثة وآمنة',
+            description: 'راحة وأمان أثناء التكوين والتدريب على السياقة.',
+            icon: '🚗'
         },
         {
-            title: 'Conduite Accompagnée (AAC)',
-            description: 'Dès 15 ans, gagnez en expérience avant le permis.',
-            icon: '👨‍👩‍👧‍👦',
-            points: ['Formation initiale', '3000km avec accompagnateur', 'RDV pédagogiques']
+            title: 'برنامج مرن',
+            description: 'مواقيت مناسبة (مساءً وعطلة نهاية الأسبوع).',
+            icon: '📅'
         },
         {
-            title: 'Conduite Supervisée',
-            description: 'Pour les plus de 18 ans souhaitant acquérir de l\'expérience.',
-            icon: '👀',
-            points: ['Après formation initiale', 'Conduite avec accompagnateur', 'Sans durée minimale']
-        },
-        {
-            title: 'Permis Moto (A2)',
-            description: 'Pour conduire des motos d\'une puissance n\'excédant pas 35 kW.',
-            icon: '🏍️',
-            points: ['Code moto', 'Plateau', 'Circulation']
-        },
-        {
-            title: 'Remise à Niveau',
-            description: 'Reprenez confiance au volant après une longue période sans conduire.',
-            icon: '🔄',
-            points: ['Évaluation personnalisée', 'Séances à la carte', 'Perfectionnement']
+            title: 'التحضير للامتحان',
+            description: 'محاكاة ونصائح عملية لزيادة فرص النجاح.',
+            icon: '🎓'
         }
     ];
+
+    // Stats Data
+    stats = [
+        { value: '95%', label: 'نسبة النجاح' },
+        { value: '10+', label: 'سنوات الخبرة' },
+        { value: '500+', label: 'طالب تم تدريبهم' }
+    ];
+
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.images.length;
+    }
+
+    prevSlide() {
+        this.currentSlide = (this.currentSlide - 1 + this.images.length) % this.images.length;
+    }
+
+    goToSlide(index: number) {
+        this.currentSlide = index;
+    }
 }

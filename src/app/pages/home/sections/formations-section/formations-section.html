@@ -1,12 +1,48 @@
-<section class="section-padding bg-light" id="formations">
+<section class="section-padding bg-light" id="formations" dir="rtl">
     <div class="container">
-        <app-section-title title="Nos Formations"
-            subtitle="Des solutions adaptées à chaque profil pour obtenir votre permis."></app-section-title>
+        <app-section-title title="مساراتنا"
+            subtitle="مسارات تدريب مكيّفة حسب مستواك لمساعدتك على النجاح في امتحان رخصة القيادة بثقة."></app-section-title>
 
-        <div class="grid-3">
-            <app-service-card *ngFor="let formation of formations" [title]="formation.title"
-                [description]="formation.description" [icon]="formation.icon" [points]="formation.points">
-            </app-service-card>
+        <div class="formations-content">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slide" *ngFor="let img of images; let i = index" [class.active]="i === currentSlide">
+
+                        <img [src]="img" alt="Formation Auto-École" class="slide-img" loading="lazy" />
+                    </div>
+
+                    <button class="slider-btn prev" (click)="prevSlide()">❮</button>
+                    <button class="slider-btn next" (click)="nextSlide()">❯</button>
+
+                    <div class="slider-dots">
+                        <span *ngFor="let img of images; let i = index" class="dot" [class.active]="i === currentSlide"
+                            (click)="goToSlide(i)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages-container">
+                <h3>لماذا تختار مدرستنا لتعليم السياقة؟</h3>
+
+                <div class="advantages-list">
+                    <div class="advantage-item" *ngFor="let adv of advantages">
+                        <div class="adv-icon">{{ adv.icon }}</div>
+                        <div class="adv-text">
+                            <h4>{{ adv.title }}</h4>
+                            <p>{{ adv.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div class="stat-item" *ngFor="let stat of stats">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-value">{{ stat.value }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
         </div>
     </div>
 </section>
