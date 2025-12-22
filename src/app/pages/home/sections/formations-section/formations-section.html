@@ -11,8 +11,8 @@
                         <img [src]="img" alt="Formation Auto-École" class="slide-img" loading="lazy" />
                     </div>
 
-                    <button class="slider-btn prev" (click)="prevSlide()">❮</button>
-                    <button class="slider-btn next" (click)="nextSlide()">❯</button>
+                    <button class="slider-btn prev" (click)="prevSlide()">❯</button>
+                    <button class="slider-btn next" (click)="nextSlide()">❮</button>
 
                     <div class="slider-dots">
                         <span *ngFor="let img of images; let i = index" class="dot" [class.active]="i === currentSlide"

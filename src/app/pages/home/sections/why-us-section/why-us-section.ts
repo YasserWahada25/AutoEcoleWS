@@ -11,10 +11,5 @@ import { ServiceCard } from '../../../../shared/components/service-card/service-
     styleUrl: './why-us-section.css',
 })
 export class WhyUsSection {
-    features = [
-        { title: 'Moniteurs Certifiés', description: 'Une équipe pédagogique expérimentée et diplômée d\'État.', icon: '👨‍🏫' },
-        { title: 'Véhicules Récents', description: 'Apprenez à conduire sur des véhicules modernes et sécurisés.', icon: '🚗' },
-        { title: 'Planning Flexible', description: 'Des horaires adaptés à votre emploi du temps (soirs et weekends).', icon: '📅' },
-        { title: 'Suivi Personnalisé', description: 'Une progression adaptée à votre rythme pour garantir votre réussite.', icon: '📈' }
-    ];
+    // Content is now static HTML for the branding statement
 }
