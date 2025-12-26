@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
     templateUrl: './why-us-section.html',
     styleUrl: './why-us-section.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WhyUsSection {
     // Content is now static HTML for the branding statement

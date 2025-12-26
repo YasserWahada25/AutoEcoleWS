@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, ChangeDetectorRef, NgZone, inject, DestroyRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output, ChangeDetectorRef, NgZone, inject, DestroyRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { interval, timer } from 'rxjs';
@@ -9,7 +9,8 @@ import { map, takeWhile, tap, finalize } from 'rxjs/operators';
     standalone: true,
     imports: [CommonModule],
     templateUrl: './splash-screen.html',
-    styleUrl: './splash-screen.css'
+    styleUrl: './splash-screen.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SplashScreenComponent implements OnInit {
     @Output() done = new EventEmitter<void>();
@@ -31,7 +32,6 @@ export class SplashScreenComponent implements OnInit {
         // Failsafe: Force finish after 5 seconds max
         timer(5000).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
             if (this.opacity > 0) {
-                console.warn('Splash screen failsafe triggered');
                 this.finish();
             }
         });
@@ -62,7 +62,6 @@ export class SplashScreenComponent implements OnInit {
                     // Force update inside Angular Zone
                     this.ngZone.run(() => {
                         this.progress = val;
-                        console.log('progress', this.progress); // Debug as requested
                         this.cdr.markForCheck();
                     });
                 }),

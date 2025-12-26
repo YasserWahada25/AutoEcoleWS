@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     imports: [CommonModule],
     templateUrl: './instructors-section.html',
-    styleUrl: './instructors-section.css'
+    styleUrl: './instructors-section.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InstructorsSection {
     instructors = [

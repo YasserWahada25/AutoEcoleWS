@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SectionTitle } from '../../../../shared/components/section-title/section-title';
 
@@ -8,6 +8,7 @@ import { SectionTitle } from '../../../../shared/components/section-title/sectio
     imports: [CommonModule, SectionTitle],
     templateUrl: './formations-section.html',
     styleUrl: './formations-section.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormationsSection {
     // Slider Images (Placeholders)

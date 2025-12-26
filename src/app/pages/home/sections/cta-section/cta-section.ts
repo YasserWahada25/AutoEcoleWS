@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
     templateUrl: './cta-section.html',
     styleUrl: './cta-section.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CtaSection {
     scrollTo(id: string) {

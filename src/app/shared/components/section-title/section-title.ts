@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './section-title.html',
   styleUrl: './section-title.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectionTitle {
   @Input() title: string = '';
