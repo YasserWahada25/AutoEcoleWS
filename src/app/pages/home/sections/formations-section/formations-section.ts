@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SectionTitle } from '../../../../shared/components/section-title/section-title';
-import { ServiceCard } from '../../../../shared/components/service-card/service-card';
 
 @Component({
     selector: 'app-formations-section',
     standalone: true,
-    imports: [CommonModule, SectionTitle, ServiceCard],
+    imports: [CommonModule, SectionTitle],
     templateUrl: './formations-section.html',
     styleUrl: './formations-section.css',
 })

@@ -223,3 +223,11 @@
 #contact[dir="rtl"] .form-group textarea {
     text-align: right;
 }
+
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
