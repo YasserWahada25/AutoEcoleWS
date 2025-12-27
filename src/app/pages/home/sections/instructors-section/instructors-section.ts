@@ -17,20 +17,6 @@ export class InstructorsSection {
             experience: '15 سنة من الخبرة',
             description: 'شغوف بالسلامة المرورية، سيرافقك صابر بكل صبر وبأسلوب تعليمي فعّال.',
             image: 'moniteurs/saber.jpg'
-        },
-        {
-            name: 'صابر بنعمار',
-            role: 'مدرب سياقة (سيارات و دراجات نارية)',
-            experience: '15 سنة من الخبرة',
-            description: 'شغوف بالسلامة المرورية، سيرافقك صابر بكل صبر وبأسلوب تعليمي فعّال.',
-            image: 'moniteurs/saber.jpg'
-        },
-        {
-            name: 'صابر بنعمار',
-            role: 'مدرب سياقة (سيارات و دراجات نارية)',
-            experience: '15 سنة من الخبرة',
-            description: 'شغوف بالسلامة المرورية، سيرافقك صابر بكل صبر وبأسلوب تعليمي فعّال.',
-            image: 'moniteurs/saber.jpg'
         }
     ];
 }
