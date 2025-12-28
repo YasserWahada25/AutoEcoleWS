@@ -14,11 +14,12 @@ export class FormationsSection {
     // Slider Images (Placeholders)
     images: string[] =
         [
-            'AutoEcole2.png',
-            'AutoEcole3.png',
-            'AutoEcole4.png',
-            'AutoEcole5.png',
-            'AutoEcole6.png',
+            'assets/AutoEcole2.png',
+            'assets/AutoEcole3.png',
+            'assets/AutoEcole4.png',
+            'assets/AutoEcole5.png',
+            'assets/AutoEcole6.png',
+            'assets/moto.jpg',
 
         ];
     currentSlide = 0;

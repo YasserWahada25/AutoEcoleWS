@@ -31,6 +31,7 @@ export class ContactSection implements OnInit {
             fullName: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
             phone: ['', Validators.required],
+            category: ['', Validators.required],
             message: [''],
             honeypot: ['']
         });

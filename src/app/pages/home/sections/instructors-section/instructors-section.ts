@@ -17,6 +17,13 @@ export class InstructorsSection {
             experience: '15 سنة من الخبرة',
             description: 'شغوف بالسلامة المرورية، سيرافقك صابر بكل صبر وبأسلوب تعليمي فعّال.',
             image: 'moniteurs/saber.jpg'
+        },
+        {
+            name: 'منال',
+            role: 'مختصة في تعليم قواعد الجولان و السلامة على الطرقات',
+            experience: '',
+            description: 'متخصصة في تبسيط قواعد الجولان وترسيخ مبادئ السلامة على الطرقات بأسلوب واضح وسهل الفهم.',
+            image: 'moniteurs/manel.jpg'
         }
     ];
 }

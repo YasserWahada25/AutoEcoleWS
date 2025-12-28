@@ -19,6 +19,7 @@ export class ReservationService {
         fullName: string;
         email: string;
         phone: string;
+        category: string;
         message?: string;
         source?: string;
         userAgent?: string;
@@ -28,6 +29,7 @@ export class ReservationService {
                 fullName: payload.fullName ?? '',
                 email: payload.email ?? '',
                 phone: payload.phone ?? '',
+                category: payload.category ?? '',
                 message: payload.message ?? '',
                 source: payload.source ?? 'Website Home Contact',
                 userAgent: payload.userAgent ?? 'Unknown',
