@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://script.google.com/macros/s/AKfycbyOPvc12RGyxBzIB8uKusjf_9Pb_axuKY1h4daHaDta_YF69SvZOJI9iNLMH8RDub7sWQ/exec',
+    apiUrl: 'https://script.google.com/macros/s/AKfycbx0LN11HJQx4OjPPgvzXjRK8CQuTZKsUdXjihx9CRE4D8Kc3HYHq8BMr-1vatbFKc8msw/exec',
     httpTimeout: 10000,
     enableRetry: true,
     maxRetries: 2
