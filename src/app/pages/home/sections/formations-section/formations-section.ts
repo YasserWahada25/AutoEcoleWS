@@ -51,7 +51,7 @@ export class FormationsSection {
     // Stats Data
     stats = [
         { value: '95%', label: 'نسبة النجاح' },
-        { value: '10+', label: 'سنوات الخبرة' },
+        { value: '15+', label: 'سنوات الخبرة' },
         { value: '500+', label: 'طالب تم تدريبهم' }
     ];
 

@@ -57,6 +57,27 @@
                 <p class="form-subtitle">سنقوم بالرد عليك في أقرب وقت ممكن.</p>
                 <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="contact-form">
 
+                    <!-- Category (FIRST) -->
+                    <div class="form-group">
+                        <label for="category">الصنف</label>
+                        <select id="category" formControlName="category"
+                            [class.input-error]="reservationForm.get('category')?.invalid && reservationForm.get('category')?.touched">
+                            <option value="" disabled selected>اختر الصنف</option>
+                            <option value="A">A (دراجات نارية)</option>
+                            <option value="A1">A1 (دراجات نارية خفيفة)</option>
+                            <option value="B">B (سيارات خفيفة)</option>
+                            <option value="C">C (شاحنات)</option>
+                            <option value="D">D (حافلات (نقل جماعي))</option>
+                            <option value="D1">D1 (حافلات صغيرة)</option>
+                            <option value="H">H (آلات فلاحية / معدات خاصة)</option>
+                        </select>
+
+                        <div *ngIf="reservationForm.get('category')?.invalid && reservationForm.get('category')?.touched"
+                            class="error-text">
+                            الصنف مطلوب
+                        </div>
+                    </div>
+
                     <!-- Full name -->
                     <div class="form-group">
                         <label for="name">الاسم الكامل</label>
@@ -90,27 +111,6 @@
                         <div *ngIf="reservationForm.get('phone')?.invalid && reservationForm.get('phone')?.touched"
                             class="error-text">
                             رقم الهاتف مطلوب
-                        </div>
-                    </div>
-
-                    <!-- Category (NEW) -->
-                    <div class="form-group">
-                        <label for="category">الصنف</label>
-                        <select id="category" formControlName="category"
-                            [class.input-error]="reservationForm.get('category')?.invalid && reservationForm.get('category')?.touched">
-                            <option value="" disabled selected>اختر الصنف</option>
-                            <option value="A">A (دراجات نارية)</option>
-                            <option value="A1">A1 (دراجات نارية خفيفة)</option>
-                            <option value="B">B (سيارات خفيفة)</option>
-                            <option value="C">C (شاحنات)</option>
-                            <option value="D">D (حافلات (نقل جماعي))</option>
-                            <option value="D1">D1 (حافلات صغيرة)</option>
-                            <option value="H">H (آلات فلاحية / معدات خاصة)</option>
-                        </select>
-
-                        <div *ngIf="reservationForm.get('category')?.invalid && reservationForm.get('category')?.touched"
-                            class="error-text">
-                            الصنف مطلوب
                         </div>
                     </div>
 
